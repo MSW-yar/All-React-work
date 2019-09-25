@@ -1,0 +1,27 @@
+redux basicaluy stores a data in middle so every compo can acess to it.
+we have to import the redux library by the link.
+ than we have to make an object with that redux init e.g :
+    const { createStore } = redux
+  than we have to make the function that is going to link the data storage and the reducer
+  isi liye hamein storage k func ko banane k liye parameter paas krna ho reducer ka that is also the function.
+        e.g const mystate = createStore(myreducer)
+than function myreducer (state, action){
+
+}
+
+mgr my reducer ko initial state chahiye hogi jo hm dein ge.
+
+const initState = {
+  todos : [],
+  posts : []
+
+}
+
+hence ,myreducer (state = initState, action)
+
+state chanage krne k liye hamein pehle dispatch action use krna hai jo reduce kre ga
+
+const todoAction = {
+  type:'ADD_TODO',
+  todo: 'buy milk'
+}
